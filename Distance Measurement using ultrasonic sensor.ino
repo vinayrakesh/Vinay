@@ -1,8 +1,8 @@
 
 #include <LiquidCrystal.h>
 LiquidCrystal LCD(10, 9, 5, 4, 3, 2);
-int trigPin=13;
-int echoPin=11;
+int trigPin=13; //trig pin connected to arduino 13
+int echoPin=11; //Echo pin connected to arduino 11
 int myCounter=0;
 int servoControlPin=6;
 float pingTime;
@@ -11,11 +11,11 @@ float speedOfSound=776.5;
 void setup()
 {
 Serial.begin(9600);
-pinMode(trigPin, OUTPUT);
-pinMode(echoPin, INPUT);
+pinMode(trigPin, OUTPUT); //Trig pin connected to output
+pinMode(echoPin, INPUT);  //echo pin to input
 LCD.begin(16,2);
 LCD.setCursor(0,0);
-LCD.print("Distance :");
+LCD.print("Distance :"); //print distance in LCD
 }
 void loop()
 {
